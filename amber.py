@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*- 
 
-import os, sys, string, commands, shutil
+import os, sys, string, shutil
+import subprocess as commands
 
 AMBERHOME = "/home/helix/amber16/"
 AMBEREXEC = "bin/pmemd.cuda"
@@ -110,16 +111,16 @@ class do_amber():
       sNoN = str(2*int(sNoN))
       self.sIonP = self.sIonP[:2].upper()
       
-    print "  Add "+sNoP+" "+sPNam+" salt ions"
-    print "  Add "+sNoN+" "+self.sIonN+" salt ions\n"
+    print( "  Add "+sNoP+" "+sPNam+" salt ions")
+    print( "  Add "+sNoN+" "+self.sIonN+" salt ions\n")
     
     if(self.sType == "SDS" or self.sType in aAAS):
       if(self.sIonP == 'MG' or self.sIonP == 'CA'):
         sNoP = str( int(sNoP) + int(round(float(self.iNo)/2.0,0)) )
-        print "  Add "+str( int(round(float(self.iNo)/2.0,0)) )+" "+sPNam+" ions to neutralize the system\n"
+        print( "  Add "+str( int(round(float(self.iNo)/2.0,0)) )+" "+sPNam+" ions to neutralize the system\n")
       else:
         sNoP = str( int(sNoP)+int(self.iNo) )
-        print "  Add "+str(self.iNo)+" "+sPNam+" ions to neutralize the system\n"
+        print( "  Add "+str(self.iNo)+" "+sPNam+" ions to neutralize the system\n")
       
     sContent = """
 logFile leap.log

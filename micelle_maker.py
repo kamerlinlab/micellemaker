@@ -476,7 +476,7 @@ def build_micelle():
       else:
         break
     
-    print "  Placed lipid "+str(j+1)
+    print("  Placed lipid "+str(j+1))
       
     iZ = ""
     iK += 1
