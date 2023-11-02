@@ -1,4 +1,5 @@
 MicelleMaker
+https://pubs.acs.org/doi/10.1021/acsomega.7b00820
 
 written by Dennis M. Krueger, November 2016
 
