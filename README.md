@@ -1,9 +1,10 @@
 MicelleMaker
+
 https://pubs.acs.org/doi/10.1021/acsomega.7b00820
 
 written by Dennis M. Krueger, November 2016
 
-ICM, Uppsala University, Uppsala, Sweden
+Kamerlin Lab, ICM, Uppsala University, Uppsala, Sweden
 
 
 Lipid library:
